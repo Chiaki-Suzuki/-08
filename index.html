@@ -75,6 +75,15 @@
                 <section id="Blog">
                     <h2>商品一覧</h2>
                     <div id="app">
+                        <div class="search">
+                            <p>種類で絞る：</p>
+                            <select v-model="kindSort">
+                                <option value="all">すべて</option>
+                                <option value="soft">ソフトコーラル</option>
+                                <option value="lps">LPS</option>
+                                <option value="sps">SPS</option>
+                            </select>
+                        </div>
                         <div class="syohin_item">
                             <div v-for="item in products" v-bind:key="item.id">
                                 <a href="goods_01.html">
@@ -83,7 +92,7 @@
                                         <img v-bind:src="item.image" alt="イメージ画像">
                                     </picture>
                                     <p>{{ item.name }}</p>
-                                    <p>\{{ item.price }}～</p>
+                                    <p>\{{ item.price | number_format }}～</p>
                                 </a>
                             </div>
                             <!-- <div>

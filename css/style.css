@@ -303,6 +303,8 @@ li {
   }
   main .main_wrapper section div img {
     width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
   main .main_wrapper section div h3 {
     text-align: left;
@@ -310,6 +312,12 @@ li {
   main .main_wrapper section div p {
     text-align: left;
     font-size: 16px;
+  }
+  main .main_wrapper section .search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0 0 10px 0;
   }
   main .main_wrapper aside div {
     margin-bottom: 30px;
@@ -548,6 +556,12 @@ li {
   }
   main .main_wrapper section h2 {
     width: 100%;
+  }
+  main .main_wrapper section .search {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0 0 10px 0;
   }
   main .main_wrapper section .syohin_item {
     display: -ms-grid;
