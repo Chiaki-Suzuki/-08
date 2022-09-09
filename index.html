@@ -77,7 +77,7 @@
                     <div id="app">
                         <div class="search">
                             <p>種類で絞る：</p>
-                            <select v-model="kindSort">
+                            <select v-model="kind">
                                 <option value="all">すべて</option>
                                 <option value="soft">ソフトコーラル</option>
                                 <option value="lps">LPS</option>
@@ -85,7 +85,7 @@
                             </select>
                         </div>
                         <div class="syohin_item">
-                            <div v-for="item in products" v-bind:key="item.id">
+                            <div v-for="item in kindSort" v-bind:key="item.id">
                                 <a href="goods_01.html">
                                     <picture>
                                         <source media="(max-width:767px)" v-bind:srcset="item.image">
