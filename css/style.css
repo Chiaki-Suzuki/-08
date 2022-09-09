@@ -586,6 +586,41 @@ li {
     text-align: left;
     font-size: 16px;
   }
+  main .main_wrapper section .pagenation {
+    margin: 0 0 60px 0;
+  }
+  main .main_wrapper section .pagenation ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .main_wrapper section .pagenation ul li {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 50em;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  main .main_wrapper section .pagenation ul li.thispage {
+    background-color: #333;
+    color: #fff;
+  }
+  main .main_wrapper section .pagenation ul li:first-of-type {
+    margin-left: 0;
+    text-indent: -1px;
+  }
+  main .main_wrapper section .pagenation ul li:first-of-type,
+  main .main_wrapper section .pagenation ul li:last-of-type {
+    font-size: 16px;
+    border: 1px solid;
+    text-indent: -1px;
+    line-height: 27px;
+  }
+  main .main_wrapper section .pagenation ul li:last-of-type {
+    text-indent: 1px;
+  }
   main .main_wrapper aside {
     width: 100%;
   }
