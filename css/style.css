@@ -602,6 +602,10 @@ li {
     border-radius: 50em;
     font-size: 14px;
     line-height: 30px;
+    cursor: pointer;
+  }
+  main .main_wrapper section .pagenation ul li:hover {
+    background-color: #eee;
   }
   main .main_wrapper section .pagenation ul li.thispage {
     background-color: #333;

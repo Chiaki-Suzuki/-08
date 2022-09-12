@@ -78,7 +78,7 @@
                     <div id="app">
                         <div class="search">
                             <p>種類で絞る：</p>
-                            <select v-model="kind">
+                            <select v-on:change="kindSort()" v-model="kind">
                                 <option value="all">すべて</option>
                                 <option value="soft">ソフトコーラル</option>
                                 <option value="lps">LPS</option>
@@ -86,7 +86,7 @@
                             </select>
                         </div>
                         <div class="syohin_item">
-                            <div v-for="item in kindSort()" v-bind:key="item.id">
+                            <div v-for="item in pageItems" v-bind:key="item.id">
                                 <a href="goods_01.html">
                                     <picture>
                                         <source media="(max-width:767px)" v-bind:srcset="item.image">
@@ -110,7 +110,7 @@
                         <div class="pagenation">
                             <ul>
                                 <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
-                                <li v-for="n in totalStep" v-bind:data-counter-id="n" v-on:click="kindSort(n)" class="pagenum">{{ n }}</li>
+                                <li v-for="n in totalStep" v-bind:data-counter-id="n" v-on:click="pagenation(n)" v-bind:class="[pagenum, {'thispage': isPage === n}]">{{ n }}</li>
                                 <!-- <li class="thispage">3</li> -->
                                 <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
                             </ul>
