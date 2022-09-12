@@ -4,7 +4,7 @@ let app = new Vue({
     products: [],
     pageItems: [],
     kind: 'all',
-    count: 8,
+    count: 6,
     totalStep: '',
     currentId: 1,
     pagenum: 'pagenum',
@@ -71,7 +71,7 @@ let app = new Vue({
       }
 
       /*-------------------------
-        ページネーション
+      ページネーション
       -------------------------*/
       // ページ数を定義
       this.totalStep = Math.ceil(newItem.length / this.count);
@@ -92,6 +92,7 @@ let app = new Vue({
           this.currentId++
         }
         // ページングリセット用
+        this.isPage = null;
         this.prevActive = false;
         this.nextActive = false;
         // 最初のページ指定時には前のページには行けないようにする
@@ -101,6 +102,10 @@ let app = new Vue({
         // 最後のページ指定時には次のページには行けないようにする
         else if (this.currentId === this.totalStep) {
           this.nextActive = true;
+        }
+        // ソート時にページ数が変わる際、currentIdがページ数を超える場合は1ページ目に戻す
+        else if (this.currentId > this.totalStep) {
+          this.currentId = 1;
         }
         // １ページ内のアイテムを配列に格納
         this.pageItems = this.currentPage(this.currentId, newItem);
