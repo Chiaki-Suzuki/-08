@@ -6,7 +6,7 @@ let app = new Vue({
     kind: 'all',
     count: 8,
     totalStep: '',
-    currentStep: 1,
+    currentId: 1,
     pagenum: 'pagenum',
     isPage: null
   },
@@ -18,7 +18,6 @@ let app = new Vue({
 
     // 商品一覧表示
     this.kindSort();
-    this.addClass(1);
   },
   filters: {
     number_format: function (val) {
@@ -26,18 +25,14 @@ let app = new Vue({
     }
   },
   methods: {
-    /*-------------------------
-      ページネーション
-    -------------------------*/
-    currentPage2: function (id, newItem) {
+    currentPage: function (id, newItem) {
       // 8アイテムを配列に格納
       let indexStart = id * this.count - this.count;
       let pageItems = newItem.splice(indexStart, this.count);
+      // クラス付与
+      this.addClass(id);
+      // ８アイテム入った配列を戻す
       return pageItems;
-    },
-    // ページネーション
-    pagenation: function (id) {
-      this.kindSort(id);
     },
     // 現在のページにクラス付与
     addClass: function (id) {
@@ -48,8 +43,9 @@ let app = new Vue({
       }
     },
     kindSort: function (id) {
-      console.log(id)
-      // 商品絞り込み
+      /*-------------------------
+        商品絞り込み
+      -------------------------*/
       let newItem = [];
 
       for (i = 0; i < this.products.length; i++) {
@@ -66,30 +62,36 @@ let app = new Vue({
         else if (this.kind === 'sps' && this.products[i].kind !== 'sps') {
           isShow = false;
         }
+        // 対象商品のみを配列に格納
         if (isShow) {
           newItem.push(this.products[i])
         }
       }
 
-
+      /*-------------------------
+        ページネーション
+      -------------------------*/
       // ページ数を定義
       this.totalStep = Math.ceil(newItem.length / this.count);
-      console.log(newItem)
 
       // ページ読み込み時
-      if (typeof id === 'undefined' && typeof newItem[0] !== 'undefined') {
-        this.pageItems = this.currentPage2(1, newItem);
-      }
-      // ページネーションクリック時
-      else if (typeof id !== 'undefined' && typeof newItem[0] !== 'undefined') {
-
-        // クラス付与
-        this.addClass(id);
-
-        this.pageItems = this.currentPage2(id, newItem);
+      if (typeof newItem[0] !== 'undefined') {
+        // ページネーションクリック時
+        if (!isNaN(id)) {
+          // 1ページ内に８要素を入れる
+          this.currentId = id;
+        }
+        // 前のページへ
+        else if (id === 'prev') {
+          this.currentId--
+        }
+        // 次のページへ
+        else if (id === 'next') {
+          this.currentId++
+        }
+        // １ページ内のアイテムを配列に格納
+        this.pageItems = this.currentPage(this.currentId, newItem);
       }
     }
-  },
-  computed: {
   }
 })
