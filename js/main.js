@@ -18,6 +18,12 @@ let app = new Vue({
     const items = await res.json();
     this.products = items;
 
+    // スマホ対応
+    if (window.innerWidth < 767) {
+      this.count = 4;
+      this.kindSort();
+    }
+
     // 商品一覧表示
     this.kindSort();
   },
@@ -28,12 +34,12 @@ let app = new Vue({
   },
   methods: {
     currentPage: function (id, newItem) {
-      // 8アイテムを配列に格納
+      // アイテムを配列に格納
       let indexStart = id * this.count - this.count;
       let pageItems = newItem.splice(indexStart, this.count);
       // クラス付与
       this.addClass(id);
-      // ８アイテム入った配列を戻す
+      // アイテムが入った配列を戻す
       return pageItems;
     },
     // 現在のページにクラス付与
@@ -103,13 +109,16 @@ let app = new Vue({
         else if (this.currentId === this.totalStep) {
           this.nextActive = true;
         }
-        // ソート時にページ数が変わる際、currentIdがページ数を超える場合は1ページ目に戻す
-        else if (this.currentId > this.totalStep) {
-          this.currentId = 1;
-        }
         // １ページ内のアイテムを配列に格納
         this.pageItems = this.currentPage(this.currentId, newItem);
       }
+    }
+  },
+  watch: {
+    // ソート時にページングを１ページ目に戻す
+    kind: function () {
+      this.currentId = 1;
+      this.kindSort();
     }
   }
 })
