@@ -109,10 +109,10 @@
                         </div>
                         <div class="pagenation">
                             <ul>
-                                <li v-on:click="kindSort('prev')"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                                <li v-on:click="kindSort('prev')" v-bind:class="{disable: prevActive}"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
                                 <li v-for="n in totalStep" v-on:click="kindSort(n)" v-bind:class="[pagenum, {'thispage': isPage === n}]">{{ n }}</li>
                                 <!-- <li class="thispage">3</li> -->
-                                <li v-on:click="kindSort('next')"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                <li v-on:click="kindSort('next')" v-bind:class="{disable: nextActive}"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
                             </ul>
                         </div>
                     </div>

@@ -611,6 +611,12 @@ li {
     background-color: #333;
     color: #fff;
   }
+  main .main_wrapper section .pagenation ul li.disable {
+    border: 0;
+    background-color: #ddd;
+    color: #fff;
+    pointer-events: none;
+  }
   main .main_wrapper section .pagenation ul li:first-of-type {
     margin-left: 0;
     text-indent: -1px;

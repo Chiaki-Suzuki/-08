@@ -8,7 +8,9 @@ let app = new Vue({
     totalStep: '',
     currentId: 1,
     pagenum: 'pagenum',
-    isPage: null
+    isPage: null,
+    prevActive: false,
+    nextActive: false,
   },
   created: async function () {
     // JSON読み込み
@@ -88,6 +90,17 @@ let app = new Vue({
         // 次のページへ
         else if (id === 'next') {
           this.currentId++
+        }
+        // ページングリセット用
+        this.prevActive = false;
+        this.nextActive = false;
+        // 最初のページ指定時には前のページには行けないようにする
+        if (this.currentId === 1) {
+          this.prevActive = true;
+        }
+        // 最後のページ指定時には次のページには行けないようにする
+        else if (this.currentId === this.totalStep) {
+          this.nextActive = true;
         }
         // １ページ内のアイテムを配列に格納
         this.pageItems = this.currentPage(this.currentId, newItem);
