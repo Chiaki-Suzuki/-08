@@ -34,4 +34,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.footer_wrapper {
+  cursor: pointer;
+}
+</style>
