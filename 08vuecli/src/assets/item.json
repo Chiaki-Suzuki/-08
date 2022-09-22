@@ -1,0 +1,177 @@
+[
+  {
+  "id": "0",
+  "kind": "soft",
+  "name": "チヂミトサカ",
+  "price": "3300",
+  "image": "soft/01.jpg"
+  },
+  {
+  "id": "1",
+  "kind": "soft",
+  "name": "スターポリプ",
+  "price": "2500",
+  "image": "soft/02.jpg"
+  },
+  {
+  "id": "2",
+  "kind": "soft",
+  "name": "ウミキノコ",
+  "price": "2100",
+  "image": "soft/03.jpg"
+  },
+  {
+  "id": "3",
+  "kind": "soft",
+  "name": "ディスクコーラル",
+  "price": "4950",
+  "image": "soft/04.jpg"
+  },
+  {
+  "id": "4",
+  "kind": "soft",
+  "name": "ツツウミヅタ",
+  "price": "2300",
+  "image": "soft/05.jpg"
+  },
+  {
+  "id": "5",
+  "kind": "soft",
+  "name": "マメスナギンチャク",
+  "price": "3000",
+  "image": "soft/06.jpg"
+  },
+  {
+  "id": "6",
+  "kind": "soft",
+  "name": "ウミアザミ",
+  "price": "3800",
+  "image": "soft/07.jpg"
+  },
+  {
+  "id": "7",
+  "kind": "lps",
+  "name": "キクメイシ",
+  "price": "7700",
+  "image": "lps/01.jpg"
+  },
+  {
+  "id": "8",
+  "kind": "lps",
+  "name": "ナガレハナサンゴ",
+  "price": "6600",
+  "image": "lps/02.jpg"
+  },
+  {
+  "id": "9",
+  "kind": "lps",
+  "name": "キッカサンゴ",
+  "price": "4950",
+  "image": "lps/03.jpg"
+  },
+  {
+  "id": "10",
+  "kind": "lps",
+  "name": "ハナサンゴ",
+  "price": "5000",
+  "image": "lps/04.jpg"
+  },
+  {
+  "id": "11",
+  "kind": "lps",
+  "name": "アワサンゴ",
+  "price": "3500",
+  "image": "lps/05.jpg"
+  },
+  {
+  "id": "12",
+  "kind": "lps",
+  "name": "カクオオトゲキクメイシ",
+  "price": "7700",
+  "image": "lps/06.jpg"
+  },
+  {
+  "id": "13",
+  "kind": "lps",
+  "name": "ハナガササンゴ",
+  "price": "2750",
+  "image": "lps/07.jpg"
+  },
+  {
+  "id": "14",
+  "kind": "lps",
+  "name": "オオタバサンゴ",
+  "price": "7730",
+  "image": "lps/08.jpg"
+  },
+  {
+  "id": "15",
+  "kind": "lps",
+  "name": "ハナガタサンゴ",
+  "price": "13200",
+  "image": "lps/09.jpg"
+  },
+  {
+  "id": "16",
+  "kind": "sps",
+  "name": "ハナヤサイサンゴ",
+  "price": "4400",
+  "image": "sps/01.jpg"
+  },
+  {
+  "id": "17",
+  "kind": "sps",
+  "name": "ショウガサンゴ",
+  "price": "3850",
+  "image": "sps/02.jpg"
+  },
+  {
+  "id": "18",
+  "kind": "sps",
+  "name": "ミドリイシ",
+  "price": "2420",
+  "image": "sps/03.jpg"
+  },
+  {
+  "id": "19",
+  "kind": "sps",
+  "name": "ハイマツミドリイシ",
+  "price": "12000",
+  "image": "sps/04.jpg"
+  },
+  {
+  "id": "20",
+  "kind": "sps",
+  "name": "コモンサンゴ",
+  "price": "9000",
+  "image": "sps/05.jpg"
+  },
+  {
+  "id": "21",
+  "kind": "sps",
+  "name": "ウスコモンサンゴ",
+  "price": "9600",
+  "image": "sps/06.jpg"
+  },
+  {
+  "id": "22",
+  "kind": "sps",
+  "name": "メデゥーササンゴ",
+  "price": "20000",
+  "image": "sps/07.jpg"
+  },
+  {
+  "id": "23",
+  "kind": "sps",
+  "name": "エダコモンサンゴ",
+  "price": "3850",
+  "image": "sps/08.jpg"
+  },
+  {
+  "id": "24",
+  "kind": "sps",
+  "name": "トゲサンゴ",
+  "price": "4950",
+  "image": "sps/09.jpg"
+  }
+]

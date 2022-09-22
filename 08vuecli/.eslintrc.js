@@ -44,6 +44,8 @@ module.exports = {
     'no-var': 'off',
     'one-var': 'off',
     'padded-blocks': 'off',
-    'quotes': 'off'
+    'quotes': 'off',
+    'brace-style': 'off',
+    'vue/require-v-for-key': 'off'
   },
 };

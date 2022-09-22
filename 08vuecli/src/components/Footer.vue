@@ -3,7 +3,7 @@
     <div class="footer_wrapper">
       <div id="About">
         <div class="top_logo">
-          <img src="img2/fish_logo.png" alt="お魚ロゴ">
+          <img src="../assets/images/fish_logo.png" alt="お魚ロゴ">
           <h1 id="top">AquaAqua</h1>
         </div>
         <p>アクアリウムなオンラインショップ</p>

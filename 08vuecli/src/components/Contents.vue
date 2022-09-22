@@ -2,9 +2,9 @@
   <main>
     <div class="top_wrapper">
       <picture>
-        <source media="(max-width:767px)" srcset="img2/top_img_mb.png">
+        <source media="(max-width:767px)" srcset="../assets/images/top_img_mb.png">
         </source>
-        <img src="img2/top_img.png" alt="イメージ画像">
+        <img src="../assets/images/top_img.png" alt="イメージ画像">
       </picture>
     </div>
     <Topic></Topic>
