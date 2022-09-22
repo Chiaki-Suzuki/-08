@@ -2,7 +2,7 @@
   <footer>
     <div class="footer_wrapper">
       <div id="About">
-        <div class="top_logo">
+        <div class="top_logo" v-on:click="scrollTop">
           <img src="../assets/images/fish_logo.png" alt="お魚ロゴ">
           <h1 id="top">AquaAqua</h1>
         </div>
@@ -25,6 +25,12 @@
 <script>
 export default {
   name: 'Footer',
+  methods: {
+    // ロゴをクリックしたらtopに移動
+    scrollTop: function() {
+      window.scrollTo(0, 0)
+    }
+  }
 };
 </script>
 

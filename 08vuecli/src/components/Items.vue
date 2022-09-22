@@ -16,7 +16,7 @@
           <div v-for="item in pageItems" v-bind:key="item.id">
             <a href="goods_01.html">
               <picture>
-                <source media="(max-width:767px)" v-bind:srcset="item.image" />
+                <source media="(max-width:767px)" v-bind:srcset="getUrl(item.image)" />
                 <img v-bind:src="getUrl(item.image)" alt="イメージ画像" />
               </picture>
               <p>{{ item.name }}</p>

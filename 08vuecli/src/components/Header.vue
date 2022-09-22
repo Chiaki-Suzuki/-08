@@ -23,13 +23,7 @@
         <a href="cart.html"><img src="../assets/images/cart.png" alt="カートアイコン" /></a>
       </div>
     </div>
-    <div class="header_inner">
-      <input type="checkbox" id="menu_btn_check" />
-      <label for="menu_btn_check" class="menu_btn">
-        <span></span>
-      </label>
-      <Nav></Nav>
-    </div>
+    <Nav></Nav>
   </header>
 </template>
 
